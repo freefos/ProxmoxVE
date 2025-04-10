@@ -47,6 +47,8 @@ fi
 
 msg_info "Creating Service"
 curl -L https://raw.githubusercontent.com/FlowFuse/device-agent/refs/heads/main/service/flowfuse-device.service -o flowfuse-device.service
+sudo sed -i 's/^User=pi$/User=root/g' flowfuse-device.service
+sudo sed -i 's/^Group=pi$/Group=root/g' flowfuse-device.service
 $STD mv flowfuse-device.service /etc/systemd/system/
 $STD systemctl daemon-reload
 $STD systemctl enable --now flowfuse-device
