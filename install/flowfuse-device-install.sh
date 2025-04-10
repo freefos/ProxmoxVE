@@ -42,7 +42,7 @@ if [ -n "$FLOWFUSE_SETUP_COMMAND" ]; then
   msg_info "Running Setup command: $FLOWFUSE_SETUP_COMMAND"
   bash -c "$FLOWFUSE_SETUP_COMMAND"
 else
-  echo "Manual device setup required! Run the Setup command manually and restart the service. 'systemctl restart flowfuse-device' "
+  msg_info "Manual device setup required! Run the Setup command manually and restart the service. 'systemctl restart flowfuse-device' "
 fi
 
 msg_info "Creating Service"
