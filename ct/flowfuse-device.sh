@@ -44,11 +44,6 @@ function update_script() {
   systemctl stop flowfuse-device
   msg_ok "Stopped $APP"
 
-  # Creating Backup
-  #msg_info "Creating Backup"
-  #tar -czf "/opt/${APP}_backup_$(date +%F).tar.gz" [IMPORTANT_PATHS]
-  #msg_ok "Backup Created"
-
   # Execute Update
   msg_info "Updating $APP LXC"
   $STD npm install -g @flowfuse/device-agent@latest

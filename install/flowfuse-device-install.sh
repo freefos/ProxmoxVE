@@ -30,13 +30,13 @@ $STD apt-get update
 $STD apt-get install -y nodejs
 msg_ok "Installed Node.js"
 
-read -r -p "Enter your Setup command: " FLOWFUSE_SETUP_COMMAND
-
 msg_info "Installing the FlowFuse Device Agent (Patience)"
 $STD mkdir /opt/flowfuse-device
 $STD chown -R "root" /opt/flowfuse-device
 $STD npm install -g @flowfuse/device-agent
 msg_ok "Installed the FlowFuse Device Agent"
+
+read -r -p "Enter your Setup command: " FLOWFUSE_SETUP_COMMAND
 
 if [ -n "$FLOWFUSE_SETUP_COMMAND" ]; then
   msg_info "Running Setup command: $FLOWFUSE_SETUP_COMMAND"
