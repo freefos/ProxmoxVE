@@ -39,8 +39,8 @@ $STD npm install -g @flowfuse/device-agent
 msg_ok "Installed the FlowFuse Device Agent"
 
 if [ -n "$FLOWFUSE_SETUP_COMMAND" ]; then
-  msg_info "Running Setup command"
-  $STD "$FLOWFUSE_SETUP_COMMAND"
+  msg_info "Running Setup command: $FLOWFUSE_SETUP_COMMAND"
+  bash -c "$FLOWFUSE_SETUP_COMMAND"
 else
   echo "Manual device setup required! Run the Setup command manually and restart the service. 'systemctl restart flowfuse-device' "
 fi
