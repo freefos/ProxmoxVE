@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+# source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/freefos/ProxmoxVE/refs/head/flowfuse-device-agent/misc/build.func)
 # Copyright (c) 2021-2025 community-scripts ORG
 # Author: freefos
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
